@@ -13,6 +13,7 @@ repos:
   - fedora-35-updates-testing
   - rpmfusion-free
   - rpmfusion-free-updates
+  - alebastr-sway-extras-fedora-35
 
 packages:
 # hardware/drivers
@@ -129,7 +130,6 @@ packages:
   - lxterminal
   - gnome-disk-utility
   - gtimelog
-  - rofimoji
 
   - fortune-mod
   - fortune-firefly
@@ -150,6 +150,11 @@ packages:
   - wl-clipboard
   - xdg-desktop-portal-wlr
   - lxappearance
+  - greetd
+  - greetd-tuigreet
+  - greetd-gtkgreet
+  - greetd-wlgreet
+  - rofi-wayland
 
 exclude-packages:
   # recommended by sway
