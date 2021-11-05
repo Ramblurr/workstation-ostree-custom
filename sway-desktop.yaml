@@ -38,14 +38,13 @@ packages:
   - dnsmasq
   - fedora-workstation-backgrounds
   - filesystem
-  - glibc-langpack-de
   - glibc-langpack-en
   - hostname
   - iproute
   - kbd
   - nss-altfiles
   - pciutils
-  # don't care, but rpm-ostree build fails otherwise
+  # important for rpm-ostree buiilds
   - selinux-policy-targeted
   - sudo
   - usbutils
@@ -61,18 +60,16 @@ packages:
   - zip
   - unzip
   - vim-enhanced
+  - emacs
   - ranger
   - bash-completion
-  - fish
   - qemu-system-x86-core
   - qemu-ui-sdl
   - qemu-img
-  - openvpn
   - mutt
   - nmap-ncat
   - isync
   - weechat
-  - duplicity
   - openssh-server
   - systemd-container
   - git
@@ -84,7 +81,23 @@ packages:
   - cockpit-system
   - cockpit-ws
   - syncthing
-  - krb5-workstation
+  - libuser # to pickup lchsh
+  - zsh
+  - zsh-syntax-highlighting
+  - jq
+  - ripgrep
+  - fzf
+  - fd-find
+  - ncdu
+  - iotop
+  - exa
+  - smartmontools
+  - stow
+  - wireguard-tools
+  - virt-install
+  - spice-gtk-tools
+  - virt-manager
+  - virt-viewer
 
 # desktop plumbing/apps
   - dejavu-sans-fonts
@@ -92,6 +105,7 @@ packages:
   - dejavu-sans-mono-fonts
   - fontawesome-fonts
   - google-noto-emoji-color-fonts
+  - fira-code-fonts
 
   - gvfs-mtp
   - pulseaudio-utils
@@ -117,19 +131,8 @@ packages:
   - gtimelog
   - rofimoji
 
-  - zsh
-  - zsh-syntax-highlighting
-  - jq
-  - ripgrep
-  - fzf
-  - fd-find
-  - ncdu
-  - iotop
-  - exa
-  - smartmontools
-  - stow
-  - wireguard-tools
-
+  - fortune-mod
+  - fortune-firefly
 
 # sway/wayland desktop
   - sway
@@ -145,13 +148,14 @@ packages:
   - wofi
   - brightnessctl
   - wl-clipboard
+  - xdg-desktop-portal-wlr
+  - lxappearance
 
 exclude-packages:
   # recommended by sway
   - alacritty
   - brltty
   - glibc-all-langpacks
-  - xdg-desktop-portal-wlr
   # recommended by gtimelog
   - yelp
 
