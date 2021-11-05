@@ -1,9 +1,16 @@
-For some background, see:
+Ramblurr's Sway Desktop
+=====================
 
- - https://fedoraproject.org/wiki/Workstation/AtomicWorkstation
- - https://fedoraproject.org/wiki/Changes/WorkstationOstree
- 
-(Note also this repo obsoletes https://pagure.io/atomic-ws)
+This is an [rpm-ostree](https://coreos.github.io/rpm-ostree/) based minimal
+[Fedora](https://getfedora.org/) developer desktop with the [sway window manager](https://swaywm.org/) and [podman](https://podman.io/)/[toolbox](https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/) for doing development and running less common graphical applications.
+
+
+It is based on the work by Martin Pitt:
+
+* [source](https://piware.de/gitweb/?p=workstation-ostree-config.git;a=summary)
+* [blog post](https://piware.de/post/2020-12-13-ostree-sway/)
+
+---
 
 High level design
 -----------------
