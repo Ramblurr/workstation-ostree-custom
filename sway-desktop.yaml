@@ -13,7 +13,7 @@ repos:
   - fedora-35-updates-testing
   - rpmfusion-free
   - rpmfusion-free-updates
-  - alebastr-sway-extras-fedora-35
+  - copr:copr.fedorainfracloud.org:alebastr:sway-extras
 
 packages:
 # hardware/drivers
