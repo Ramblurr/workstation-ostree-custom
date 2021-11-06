@@ -49,6 +49,7 @@ packages:
   - selinux-policy-targeted
   - sudo
   - usbutils
+  - iputils
 # shell tools and development
   - bc
   - gnupg2
@@ -91,6 +92,8 @@ packages:
   - fd-find
   - ncdu
   - iotop
+  - iptraf
+  - htop
   - exa
   - smartmontools
   - stow
@@ -143,6 +146,7 @@ packages:
   - waybar
   - slurp
   - grim
+  - swappy
   - xorg-x11-server-Xwayland
   #- firefox-wayland
   - wofi
@@ -155,6 +159,8 @@ packages:
   - greetd-gtkgreet
   - greetd-wlgreet
   - rofi-wayland
+  - gammastep
+  - gammastep-indicator
 
 exclude-packages:
   # recommended by sway
