@@ -120,7 +120,7 @@ packages:
   # for wf-recorder
   - libavdevice
   - xdg-desktop-portal-gtk
-
+  - mosh
   - pavucontrol
   - pcmanfm
   - simple-scan
@@ -133,7 +133,6 @@ packages:
   - lxterminal
   - gnome-disk-utility
   - gtimelog
-
   - fortune-mod
   - fortune-firefly
 
