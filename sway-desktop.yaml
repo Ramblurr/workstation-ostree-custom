@@ -102,6 +102,8 @@ packages:
   - spice-gtk-tools
   - virt-manager
   - virt-viewer
+  - borgbackup
+  - borgmatic
 
 # desktop plumbing/apps
   - dejavu-sans-fonts
