@@ -133,6 +133,7 @@ packages:
   - pinentry-gnome3
   - lxpolkit
   - lxterminal
+  - kitty
   - gnome-disk-utility
   - gtimelog
   - fortune-mod
@@ -153,6 +154,7 @@ packages:
   - wofi
   - brightnessctl
   - wl-clipboard
+  - clipman
   - xdg-desktop-portal-wlr
   - lxappearance
   - greetd
