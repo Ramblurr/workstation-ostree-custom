@@ -31,6 +31,7 @@ packages:
   - wpa_supplicant
   - udisks2-lvm2
   - opensc
+  - fwupd
 # basic system
   - acl
   - attr
