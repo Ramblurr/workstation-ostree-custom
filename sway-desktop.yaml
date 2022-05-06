@@ -22,8 +22,18 @@ packages:
   - iwl6000g2a-firmware
   - iwl7260-firmware
   - alsa-sof-firmware
+  - NetworkManager
+  - NetworkManager-tui
+  - NetworkManager-bluetooth
   - NetworkManager-wifi
   - NetworkManager-openvpn-gnome
+  - NetworkManager-config-connectivity-fedora
+  - cups
+  - cups-filters
+  - gutenprint
+  - gutenprint-cups
+  - system-config-printer-udev
+  - bluez-cups
   - sane-backends
   - sane-backends-drivers-scanners
   - powertop
@@ -48,9 +58,14 @@ packages:
   - pciutils
   # important for rpm-ostree buiilds
   - selinux-policy-targeted
+  - policycoreutils
+  - policycoreutils-python-utils
   - sudo
   - usbutils
   - iputils
+  - util-linux
+  - firewalld
+  - firewall-config
 # shell tools and development
   - bc
   - gnupg2
@@ -75,7 +90,9 @@ packages:
   - weechat
   - openssh-server
   - systemd-container
+  - systemd-oomd-defaults
   - git
+  - rsync
   - patchutils
   - make
   - strace
@@ -105,7 +122,8 @@ packages:
   - virt-viewer
   - borgbackup
   - borgmatic
-
+  - diceware
+  - pwgen
 # desktop plumbing/apps
   - dejavu-sans-fonts
   - dejavu-serif-fonts
@@ -113,9 +131,15 @@ packages:
   - fontawesome-fonts
   - google-noto-emoji-color-fonts
   - fira-code-fonts
-
   - gvfs-mtp
   - pulseaudio-utils
+    #- pulseaudio-module-bluetooth-freeworld
+  - wireplumber
+  - pipewire-alsa
+  - pipewire-gstreamer
+  - pipewire-pulseaudio
+  - pipewire-utils
+  - pipewire-codec-aptx
   - alsa-plugins-pulseaudio
   - gstreamer1-plugins-good
   - gstreamer1-plugins-ugly

@@ -8,7 +8,7 @@ REPO="${REPO_FINAL}.new"
 
 CURL="curl -u token:$(cat ~/.config/github-token) --show-error --fail "
 RESPONSE=$($CURL --silent https://api.github.com/repos/Ramblurr/workstation-ostree-custom/actions/artifacts)
-ZIP=$(echo "$RESPONSE" | jq --raw-output '.artifacts | map(select(.name == "repository"))[0].archive_download_url')
+ZIP=$(echo "$RESPONSE" | jq --raw-output '.artifacts | map(select(.name == "repository-fc35"))[0].archive_download_url')
 echo "INFO: Downloading $ZIP ..."
 [ -e /tmp/repository.zip ] || $CURL --continue-at - -L -o /tmp/repository.zip "$ZIP"
 rm -rf "$REPO"

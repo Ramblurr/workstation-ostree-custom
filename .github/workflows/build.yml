@@ -1,4 +1,4 @@
-name: build
+name: build fc35
 on:
   schedule:
     - cron: 0 2 * * 6
@@ -27,6 +27,6 @@ jobs:
       - name: Create repository artifact
         uses: actions/upload-artifact@v2
         with:
-          name: repository
+          name: repository-fc35
           path: /var/tmp/repo.tar.gz
           retention-days: 5
