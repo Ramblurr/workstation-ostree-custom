@@ -1,3 +1,17 @@
+Ramblurr's Sway Desktop
+=====================
+
+This is an [rpm-ostree](https://coreos.github.io/rpm-ostree/) based minimal
+[Fedora 36](https://getfedora.org/) developer desktop with the [sway window manager](https://swaywm.org/) and [podman](https://podman.io/)/[toolbox](https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/) for doing development and running less common graphical applications.
+
+
+It is based on the work by Martin Pitt:
+
+* [source](https://piware.de/gitweb/?p=workstation-ostree-config.git;a=summary)
+* [blog post](https://piware.de/post/2020-12-13-ostree-sway/)
+
+---
+
 # Manifests for rpm-ostree based Fedora variants
 
 This is the configuration needed to create

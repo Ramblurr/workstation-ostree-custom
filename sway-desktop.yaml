@@ -1,0 +1,190 @@
+---
+include: fedora-common-ostree.yaml
+
+ref: sway-desktop
+rojig:
+  name: sway-desktop
+  summary: "Ramblurr's Sway Desktop"
+  license: MIT
+
+repos:
+  - fedora-36
+  - fedora-36-updates
+  - fedora-36-updates-testing
+  - rpmfusion-free
+  - rpmfusion-free-updates
+  - copr:copr.fedorainfracloud.org:alebastr:sway-extras
+
+packages:
+# hardware/drivers
+  - kernel
+  - kernel-modules-extra
+  - iwl6000g2a-firmware
+  - iwl7260-firmware
+  - alsa-sof-firmware
+  - NetworkManager
+  - NetworkManager-bluetooth
+  - NetworkManager-wifi
+  - NetworkManager-openvpn-gnome
+  - NetworkManager-config-connectivity-fedora
+  - cups
+  - cups-filters
+  - sane-backends
+  - sane-backends-drivers-scanners
+  - powertop
+  - iwd
+  - wpa_supplicant
+  - udisks2-lvm2
+  - opensc
+  - fwupd
+# basic system
+  - acl
+  - attr
+  - basesystem
+  - cryptsetup
+  - dnsmasq
+  - fedora-workstation-backgrounds
+  - filesystem
+  - glibc-langpack-en
+  - hostname
+  - iproute
+  - kbd
+  - nss-altfiles
+  - pciutils
+  # important for rpm-ostree buiilds
+  - selinux-policy-targeted
+  - sudo
+  - usbutils
+  - iputils
+# shell tools and development
+  - bc
+  - gnupg2
+  - fpaste
+  - lsof
+  - man-db
+  - mtr
+  - tree
+  - bzip2
+  - zip
+  - unzip
+  - vim-enhanced
+  - emacs
+  - ranger
+  - bash-completion
+  - qemu-system-x86-core
+  - qemu-ui-sdl
+  - qemu-img
+  - mutt
+  - nmap-ncat
+  - isync
+  - weechat
+  - openssh-server
+  - systemd-container
+  - git
+  - patchutils
+  - make
+  - strace
+  - wget
+  - w3m
+  - cockpit-system
+  - cockpit-ws
+  - syncthing
+  - libuser # to pickup lchsh
+  - zsh
+  - zsh-syntax-highlighting
+  - jq
+  - ripgrep
+  - fzf
+  - fd-find
+  - ncdu
+  - iotop
+  - iptraf
+  - htop
+  - exa
+  - smartmontools
+  - stow
+  - wireguard-tools
+  - virt-install
+  - spice-gtk-tools
+  - virt-manager
+  - virt-viewer
+  - borgbackup
+  - borgmatic
+  - diceware
+  - pwgen
+# desktop plumbing/apps
+  - dejavu-sans-fonts
+  - dejavu-serif-fonts
+  - dejavu-sans-mono-fonts
+  - fontawesome-fonts
+  - google-noto-emoji-color-fonts
+  - fira-code-fonts
+  - gvfs-mtp
+  - pulseaudio-utils
+  - wireplumber
+  - pipewire-alsa
+  - pipewire-gstreamer
+  - pipewire-pulseaudio
+  - pipewire-utils
+  - pipewire-codec-aptx
+  - alsa-plugins-pulseaudio
+  - gstreamer1-plugins-good
+  - gstreamer1-plugins-ugly
+  - gstreamer1-libav
+  # for wf-recorder
+  - libavdevice
+  - xdg-desktop-portal-gtk
+  - mosh
+  - pavucontrol
+  - pcmanfm
+  - simple-scan
+  - nm-connection-editor
+  - eog
+  - evince
+  - gnome-keyring
+  - pinentry-gnome3
+  - mate-polkit
+  - kitty
+  - gnome-disk-utility
+  - gtimelog
+  - fortune-mod
+  - fortune-firefly
+
+# sway/wayland desktop
+  - sway
+  - swayidle
+  - swaylock
+  - kanshi
+  - mako
+  - waybar
+  - slurp
+  - grim
+  - swappy
+  - xorg-x11-server-Xwayland
+  #- firefox-wayland
+  - wofi
+  - brightnessctl
+  - wl-clipboard
+  - clipman
+  - xdg-desktop-portal-wlr
+  - greetd
+  - greetd-tuigreet
+  - greetd-gtkgreet
+  - greetd-wlgreet
+  - rofi-wayland
+  - rofimoji
+  - gammastep
+  - gammastep-indicator
+
+exclude-packages:
+  # recommended by sway
+  - alacritty
+  - brltty
+  - glibc-all-langpacks
+  # recommended by gtimelog
+  - yelp
+
+add-files:
+  - ["2015-RH-IT-Root-CA.pem", "/etc/pki/ca-trust/source/anchors/2015-RH-IT-Root-CA.pem"]
+
+postprocess-script: sway-post.sh
