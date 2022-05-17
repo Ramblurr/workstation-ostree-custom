@@ -1,4 +1,4 @@
-name: build fc36
+name: build fc36-sway-gnome
 on:
   schedule:
     - cron: 0 2 * * 6
@@ -27,6 +27,6 @@ jobs:
       - name: Create repository artifact
         uses: actions/upload-artifact@v2
         with:
-          name: repository-fc36
+          name: repository-fc36-sway-gnome
           path: /var/tmp/repo.tar.gz
           retention-days: 5

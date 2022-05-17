@@ -1,0 +1,129 @@
+include: gnome-desktop-pkgs.yaml
+ref: fedora/36/${basearch}/silverblue
+rojig:
+  name: sway-and-gnome-desktop
+  summary: "Ramblurr's Sway Desktop based on Fedora Silverblue"
+  license: MIT
+
+packages:
+  - fedora-release-silverblue
+  - desktop-backgrounds-gnome
+  - gnome-shell-extension-background-logo
+  - pinentry-gnome3
+  # Does it really still make sense to ship Qt by default if we
+  # expect people to run apps in containers?
+  - qgnomeplatform
+  # Include evince-thumbnailer otherwise PDF thumbnails won't work in Nautilus
+  # https://github.com/fedora-silverblue/issue-tracker/issues/98
+  - evince-thumbnailer
+  # Include evince-previewer otherwise print previews are broken in Evince
+  # https://github.com/fedora-silverblue/issue-tracker/issues/122
+  - evince-previewer
+  # Include totem-video-thumbnailer for video thumbnailing in Nautilus
+  # https://pagure.io/fedora-workstation/issue/168
+  - totem-video-thumbnailer
+# START package customization
+# basic system
+# shell tools and development
+  - vim-enhanced
+  - emacs
+  - ranger
+  - zsh
+  - zsh-syntax-highlighting
+  - qemu-img
+  - nmap-ncat
+  - isync
+  - git
+  - patchutils
+  - make
+  - strace
+  - wget
+  - w3m
+  - cockpit-system
+  - cockpit-ws
+  - syncthing
+  - jq
+  - ripgrep
+  - fzf
+  - fd-find
+  - ncdu
+  - iotop
+  - iptraf
+  - htop
+  - exa
+  - smartmontools
+  - stow
+  - wireguard-tools
+  - virt-install
+  - spice-gtk-tools
+  - virt-manager
+  - virt-viewer
+  - borgbackup
+  - borgmatic
+  - diceware
+  - pwgen
+# desktop plumbing/apps
+  - dejavu-sans-fonts
+  - dejavu-serif-fonts
+  - dejavu-sans-mono-fonts
+  - fontawesome-fonts
+  - google-noto-emoji-color-fonts
+  - fira-code-fonts
+  - gvfs-mtp
+  - pulseaudio-utils
+  - wireplumber
+  - pipewire-codec-aptx
+  - alsa-plugins-pulseaudio
+  - gstreamer1-plugins-good
+  - gstreamer1-plugins-ugly
+  - gstreamer1-libav
+  # for wf-recorder
+  - libavdevice
+  - mosh
+  - pavucontrol
+  - pcmanfm
+  - simple-scan
+  - nm-connection-editor
+  - eog
+  - kitty
+  - fortune-mod
+  - fortune-firefly
+# sway/wayland desktop
+  - sway
+  - swayidle
+  - swaylock
+  - kanshi
+  - mako
+  - waybar
+  - slurp
+  - grim
+  - swappy
+  #- firefox-wayland
+  - wofi
+  - brightnessctl
+  - wl-clipboard
+  - clipman
+  - xdg-desktop-portal-wlr
+  - rofi-wayland
+  - rofimoji
+  - gammastep
+  - gammastep-indicator
+# END package customization
+
+repos:
+  - fedora-36
+  - fedora-36-updates
+  - rpmfusion-free
+  - rpmfusion-free-updates
+  - copr:copr.fedorainfracloud.org:alebastr:sway-extras
+
+exclude-packages:
+  # recommended by sway
+  - alacritty
+  - brltty
+  - glibc-all-langpacks
+
+add-files:
+  - ["2015-RH-IT-Root-CA.pem", "/etc/pki/ca-trust/source/anchors/2015-RH-IT-Root-CA.pem"]
+
+postprocess-script: sway-post.sh
